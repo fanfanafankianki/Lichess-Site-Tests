@@ -14,7 +14,7 @@ public class GamePage {
 	//Main content elements
 	//
 	
-	@FindBy(xpath="	//main[1]/div[1]/div[1]/div[1]/cg-helper[1]/cg-container[1]/cg-board[1]")
+	@FindBy(xpath="//main[1]/div[1]/div[1]/div[1]/cg-helper[1]/cg-container[1]/cg-board[1]")
 	@CacheLookup
 	WebElement gameboard;
 
@@ -238,16 +238,15 @@ public class GamePage {
 	@FindBy(xpath="//button[@class='text']")
 	WebElement a_usertag_logout;
 	
-	public GamePage (WebDriver driver) {
+	public GamePage (WebDriver driver) throws InterruptedException {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-
-	}
-	public void userisonGamePage(WebDriver driver) {
+		Thread.sleep(2000);
 		if(driver.getCurrentUrl().equals("https://lichess.org/")) {
 			throw new IllegalStateException("This is not game page! The current page is" + driver.getCurrentUrl());
 		}
 	}
+	
 	public void gameboardIsDisplayed() {
 		gameboard.isDisplayed();
 		

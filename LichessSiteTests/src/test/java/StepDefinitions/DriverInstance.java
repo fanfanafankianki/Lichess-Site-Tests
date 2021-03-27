@@ -13,7 +13,6 @@ public class DriverInstance {
 	
 	@Before //Chromedriver path in system
 	public void Before() {
-		System.out.println("By³em tu");
 		String projectPath = System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver",projectPath+"/src/test/resources/Browser_Drivers/chromedriver.exe");
 	}

@@ -45,9 +45,8 @@ public class LoginStepsLichess {
 	}
 
 	@Then("user is navigated to the home page")
-	public void user_is_navigated_to_the_home_page() {
+	public void user_is_navigated_to_the_home_page() throws InterruptedException {
 		home = new HomePage(driver);
-		home.userisonhomepage();
 	}
 
 	@And("user username is displayed in right corner")

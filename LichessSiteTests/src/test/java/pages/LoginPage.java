@@ -258,8 +258,7 @@ public class LoginPage {
 	
 	
 	
-	//Constructor
-	
+	//Constructor checks if you are on the right page 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
