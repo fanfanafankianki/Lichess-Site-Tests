@@ -6,7 +6,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ArenaPage {
+public class LearnPage {
 	
 	protected WebDriver driver;
 	
@@ -14,10 +14,7 @@ public class ArenaPage {
 	//Main content elements
 	//
 	
-	@FindBy(xpath="//main[1]/section[1]")
-	WebElement section_tournament;
-	
-	
+
 	//
 	//Elements present on every page
 	//
@@ -238,17 +235,16 @@ public class ArenaPage {
 	@FindBy(xpath="//button[@class='text']")
 	WebElement a_usertag_logout;
 	
-	public ArenaPage (WebDriver driver) throws InterruptedException {
+	//Constructor checks if you are on the right page 
+	public LearnPage (WebDriver driver) throws InterruptedException {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		Thread.sleep(2000);
-		if(!driver.getCurrentUrl().equals("https://lichess.org/tournament")) {
-			throw new IllegalStateException("This is not arena page! The current page is" + driver.getCurrentUrl());
+		if(!driver.getCurrentUrl().equals("https://lichess.org/learn#/")) {
+			throw new IllegalStateException("This is not learn page! The current page is" + driver.getCurrentUrl());
 		}
 	}
 	
-	public void tournamentSectionIsDisplayed() {
-		section_tournament.isDisplayed();
-		
+	public void gameboardIsDisplayed() {
 	}
 }

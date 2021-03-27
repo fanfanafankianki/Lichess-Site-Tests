@@ -40,15 +40,11 @@ public class Play_CreateAGame {
 	public void game_page_is_opened() throws InterruptedException {
 		driver = DriverInstance.getDriver();
 		game = new GamePage(driver);
-		game.userisonGamePage(driver);
-		Thread.sleep(5000);
-		
 	}
 
 	@And("game board is displayed")
 	public void game_board_is_displayed() {
 		driver = DriverInstance.getDriver();
-		game = new GamePage(driver);
 		game.gameboardIsDisplayed();
 		System.out.println(driver);
 		DriverInstance.teardown(driver);

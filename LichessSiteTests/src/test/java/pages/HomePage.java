@@ -334,14 +334,11 @@ public class HomePage {
 	//Functions for elements visible on home page 
 	//
 	
+	
+	//Constructor checks if you are on the right page 
 	public HomePage (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		if(!driver.getCurrentUrl().equals("https://lichess.org/")) {
-			throw new IllegalStateException("This is not home page! The current page is" + driver.getCurrentUrl());
-		}
-	}
-	public void userisonhomepage() {
 		if(!driver.getCurrentUrl().equals("https://lichess.org/")) {
 			throw new IllegalStateException("This is not home page! The current page is" + driver.getCurrentUrl());
 		}
@@ -391,10 +388,12 @@ public class HomePage {
 		hov_settings.click();
 	}
 	
+	// Play -> hovered options click
+	
 	public void hover_Play_Arena() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play);
-		Thread.sleep(3000);
+		actions.pause(2000);
 		actions.moveToElement(hov_play_arenatournaments);
 		actions.click().build().perform();
 
@@ -403,7 +402,7 @@ public class HomePage {
 	public void hover_Play_NewGame() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play);
-		Thread.sleep(2000);
+		actions.pause(2000);
 		actions.moveToElement(hov_play_createnewgame);
 		actions.click().build().perform();
 
@@ -412,7 +411,7 @@ public class HomePage {
 	public void hover_Play_Swiss() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play);
-		Thread.sleep(2000);
+		actions.pause(2000);
 		actions.moveToElement(hov_play_swisstournaments);
 		actions.click().build().perform();
 
@@ -421,8 +420,93 @@ public class HomePage {
 	public void hover_Play_Simultan() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play);
-		Thread.sleep(2000);
+		actions.pause(2000);
 		actions.moveToElement(hov_play_simultan);
+		actions.click().build().perform();
+
+	}
+	
+	// Puzzles -> hovered options click
+	
+	public void hover_Puzzles_Puzzles() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_puzzles);
+		actions.pause(2000);
+		actions.moveToElement(hov_puzzles_puzzles);
+		actions.click().build().perform();
+
+	}
+	
+	public void hover_Puzzles_Dashboard() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_puzzles);
+		actions.pause(2000);
+		actions.moveToElement(hov_puzzles_dashboard);
+		actions.click().build().perform();
+
+	}
+	
+	public void hover_Puzzles_Racer() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_puzzles);
+		actions.pause(2000);
+		actions.moveToElement(hov_puzzles_racer);
+		actions.click().build().perform();
+
+	}
+	
+	public void hover_Puzzles_Storm() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_puzzles);
+		actions.pause(2000);
+		actions.moveToElement(hov_puzzles_storm);
+		actions.click().build().perform();
+
+	}
+	
+	// Play -> hovered options click
+	
+	public void hover_Learn_ChessBasics() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_learn);
+		actions.pause(2000);
+		actions.moveToElement(hov_learn_chessbasics);
+		actions.click().build().perform();
+
+	}
+	
+	public void hover_Learn_Practice() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_learn);
+		actions.pause(2000);
+		actions.moveToElement(hov_learn_practice);
+		actions.click().build().perform();
+
+	}
+	
+	public void hover_Learn_Coordinates() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_learn);
+		actions.pause(2000);
+		actions.moveToElement(hov_learn_coordinates);
+		actions.click().build().perform();
+
+	}
+	
+	public void hover_Learn_Study() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_learn);
+		actions.pause(2000);
+		actions.moveToElement(hov_learn_study);
+		actions.click().build().perform();
+
+	}
+	
+	public void hover_Learn_Coaches() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_learn);
+		actions.pause(2000);
+		actions.moveToElement(hov_learn_coaches);
 		actions.click().build().perform();
 
 	}

@@ -10,6 +10,6 @@ monochrome=true,
 plugin = { "pretty", "html:HtmlReports/HtmlReport"}
 )
 
-public class PlayButtonRunner {
+public class TestPlayButtonRunner {
 
 }

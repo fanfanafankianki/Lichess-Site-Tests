@@ -39,18 +39,15 @@ public class Play_ArenaLichess {
 	@When("user hovers over Play and clicks on Arena tournaments")
 	public void user_hovers_over_play_and_clicks_on_arena_tournaments() throws InterruptedException {
 		driver = DriverInstance.getDriver();
-
 		home = new HomePage(driver);
 		home.hover_Play_Arena();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the arena page")
 	public void user_is_navigated_to_the_arena_page() throws InterruptedException {
 		Thread.sleep(2000);
-
 		arena = new ArenaPage(driver);
-		arena.userisonarenapage();
 	}
 
 	@And("tournament section is displayed")
