@@ -1,10 +1,9 @@
-package StepDefinitions;
+package StepDefinitions.LoginStepDefinitions;
 
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
+import StepDefinitions.DriverInstance;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,14 +16,16 @@ public class LoginStepsLichess {
 	WebDriver driver = null;
 	LoginPage login;
 	HomePage home;
+	private DriverInstance DriverInstance;
+	
+	public LoginStepsLichess(StepDefinitions.DriverInstance DriverInstance) {
+		this.DriverInstance=DriverInstance;
+		
+	}
+	
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
-		String projectPath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver",projectPath+"/src/test/resources/Browser_Drivers/chromedriver.exe");
-		driver = new ChromeDriver(); 
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+		driver = DriverInstance.setUp();
 		driver.navigate().to("https://lichess.org/login?referrer=/");
 	}
 
@@ -52,8 +53,6 @@ public class LoginStepsLichess {
 	@And("user username is displayed in right corner")
 	public void user_username_is_displayed_in_right_corner() {
 		home.usernameIsDisplayed();
-		driver.close();
-		driver.quit();
-	
+		DriverInstance.teardown(driver);
 	}
 }
