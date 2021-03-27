@@ -6,13 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.Before;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverInstance {
 	private WebDriver driver;
 	
 	@Before //Chromedriver path in system
 	public void Before() {
-
+		System.out.println("By³em tu");
 		String projectPath = System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver",projectPath+"/src/test/resources/Browser_Drivers/chromedriver.exe");
 	}
@@ -30,6 +31,10 @@ public class DriverInstance {
 	public WebDriver setUp() {
 		
 		System.out.println("Initializing driver");
+		
+		//WebDriverManager keeps chromedriver version up to date
+		WebDriverManager.chromedriver().setup();
+		
 		// initialize the driver
 		driver = new ChromeDriver(); 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
