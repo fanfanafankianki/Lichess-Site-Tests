@@ -6,37 +6,20 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
-
+public class ArenaPage {
+	
 	protected WebDriver driver;
-	//
-	//
-	//Elements present only on this page
-	//
-	//
-	
-	@FindBy(id="form3-username")
-	WebElement txt_username;
-
-	@FindBy(id="form3-password")
-	WebElement txt_password;
-
-	@FindBy(xpath="//form[1]/div[1]/button")
-	WebElement btn_login;
-
-	@FindBy(xpath="//a[@href='/signup']")
-	WebElement a_register;
-	
-	@FindBy(xpath="//a[@href='/password/reset']")
-	WebElement a_resetpassword;
-	
-	@FindBy(xpath="//a[@href='/auth/magic-link']")
-	WebElement a_loginbyemail;
 	
 	//
+	//Main content elements
+	//
+	
+	@FindBy(xpath="//main[1]/section[1]")
+	WebElement section_tournament;
+	
+	
 	//
 	//Elements present on every page
-	//
 	//
 	
 	@FindBy(xpath="//header/div[1]/h1[1]/a[1]")
@@ -213,7 +196,6 @@ public class LoginPage {
 	@FindBy(xpath="	//a[@class='status']")
 	WebElement hov_settings_lag;
 	
-	
 	//
 	//Element available on every page if user is not logged in
 	//
@@ -256,92 +238,22 @@ public class LoginPage {
 	@FindBy(xpath="//button[@class='text']")
 	WebElement a_usertag_logout;
 	
-	
-	
-	//Constructor
-	
-	public LoginPage(WebDriver driver) {
+	public ArenaPage (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		if(!driver.getCurrentUrl().equals("https://lichess.org/login?referrer=/")) {
-			throw new IllegalStateException("This is not login page! The current page is" + driver.getCurrentUrl());
+		if(!driver.getCurrentUrl().equals("https://lichess.org/tournament")) {
+			throw new IllegalStateException("This is not arena page! The current page is" + driver.getCurrentUrl());
 		}
-
 	}
 	
-	//
-	//Functions only for this page
-	//
-	
-	public void enterUsername(String username) {
-		txt_username.sendKeys(username);
-	}
-
-	public void enterPassword(String password) {
-		txt_password.sendKeys(password);
-	}
-
-	public void loginValidUser(String username, String password) {
-		txt_username.sendKeys(username);
-		txt_password.sendKeys(password);
-		btn_login.click();
-	}
-
-	public void clickLogin() {
-		btn_login.click();
+	public void userisonarenapage() {
+		if(!driver.getCurrentUrl().equals("https://lichess.org/tournament")) {
+			throw new IllegalStateException("This is not home page! The current page is" + driver.getCurrentUrl());
+		}
 	}
 	
-	public void clickRegister() {
-		a_register.click();
+	public void tournamentSectionIsDisplayed() {
+		section_tournament.isDisplayed();
+		
 	}
-	
-	public void clickResetPassword() {
-		a_resetpassword.click();
-	}
-	
-	public void clickLoginByEmail() {
-		a_loginbyemail.click();
-	}
-	
-	//
-	//Functions for elements visible on every page 
-	//
-	
-	public void clickLichess() {
-		a_lichess.click();
-	}
-
-	public void clickPlay() {
-		hov_play.click();
-	}
-
-	public void clickPuzzles() {
-		hov_puzzles.click();
-	}
-
-	public void clickLearn() {
-		hov_learn.click();
-	}
-	
-	public void clickWatch() {
-		hov_watch.click();
-	}
-	
-	public void clickCommunity() {
-		hov_community.click();
-	}
-	
-	public void clickTools() {
-		hov_tools.click();
-	}
-	
-	public void clickSearch() {
-		hov_search.click();
-	}
-	
-	public void clickSettings() {
-		hov_settings.click();
-	}
-	
-
 }

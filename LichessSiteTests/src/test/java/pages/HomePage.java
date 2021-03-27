@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -121,6 +122,11 @@ public class HomePage {
 	
 	@FindBy(xpath="//a[@href='/?any#hook']")
 	WebElement hov_play_createnewgame;
+	
+	
+	@FindBy(xpath="	//div[1]/form[1]/div[3]/button[1]")
+	WebElement hov_play_createnewgame_chooseblack;
+
 	
 	@FindBy(xpath="//section/div/a[@href='/tournament']")
 	@CacheLookup
@@ -280,6 +286,7 @@ public class HomePage {
 	
 	@FindBy(xpath="	//a[@class='status']")
 	WebElement hov_settings_lag;
+	
 	//
 	//Element available on every page if user is not logged in
 	//
@@ -323,6 +330,10 @@ public class HomePage {
 	WebElement a_usertag_logout;
 	
 	
+	//
+	//Functions for elements visible on home page 
+	//
+	
 	public HomePage (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -330,12 +341,19 @@ public class HomePage {
 			throw new IllegalStateException("This is not home page! The current page is" + driver.getCurrentUrl());
 		}
 	}
-	public boolean userisonhomepage() {
-		return driver.getCurrentUrl().equals("https://lichess.org/");
+	public void userisonhomepage() {
+		if(!driver.getCurrentUrl().equals("https://lichess.org/")) {
+			throw new IllegalStateException("This is not home page! The current page is" + driver.getCurrentUrl());
+		}
 	}
+	
 	public void usernameIsDisplayed() {
 		a_usertag.isDisplayed();
 	}
+	
+	//
+	//Functions for elements visible on every page 
+	//
 	
 	public void clickLichess() {
 		a_lichess.click();
@@ -371,6 +389,47 @@ public class HomePage {
 	
 	public void clickSettings() {
 		hov_settings.click();
+	}
+	
+	public void hover_Play_Arena() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_play);
+		Thread.sleep(3000);
+		actions.moveToElement(hov_play_arenatournaments);
+		actions.click().build().perform();
+
+	}
+	
+	public void hover_Play_NewGame() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_play);
+		Thread.sleep(2000);
+		actions.moveToElement(hov_play_createnewgame);
+		actions.click().build().perform();
+
+	}
+	
+	public void hover_Play_Swiss() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_play);
+		Thread.sleep(2000);
+		actions.moveToElement(hov_play_swisstournaments);
+		actions.click().build().perform();
+
+	}
+	
+	public void hover_Play_Simultan() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(hov_play);
+		Thread.sleep(2000);
+		actions.moveToElement(hov_play_simultan);
+		actions.click().build().perform();
+
+	}
+	
+	public void creategame_chooseblack() throws InterruptedException {
+		hov_play_createnewgame_chooseblack.click();
+		Thread.sleep(10000);
 	}
 
 }
