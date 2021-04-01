@@ -1,4 +1,4 @@
-package StepDefinitions.PlayButtonStepDefinitions;
+package StepDefinitions.FooterButtons;
 
 
 import org.openqa.selenium.WebDriver;
@@ -27,7 +27,7 @@ public class Puzzles_Puzzles {
 		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.clickPuzzles();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 
 	@When("user hovers over Puzzles and clicks on Puzzles")
@@ -35,7 +35,7 @@ public class Puzzles_Puzzles {
 		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Puzzles_Puzzles();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Puzzles page")

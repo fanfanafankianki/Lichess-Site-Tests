@@ -1,4 +1,4 @@
-package StepDefinitions.PlayButtonStepDefinitions;
+package StepDefinitions.FooterButtons;
 
 
 import org.openqa.selenium.WebDriver;
@@ -27,7 +27,7 @@ public class Learn_Study {
 		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Learn_Study();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Study page")

@@ -29,6 +29,7 @@ public class DriverInstance {
 	//Initialization of chromedriver instance and returning it to other class 
 	public WebDriver setUp() {
 		
+		
 		System.out.println("Initializing driver");
 		
 		//WebDriverManager keeps chromedriver version up to date
