@@ -38,6 +38,11 @@ public class LoginPage extends BasePage{
 	@CacheLookup
 	WebElement a_loginbyemail;
 	
+	//main[1]/form[1]/div[1]/div[1]/p[1]
+	@FindBy(xpath="//main[1]/form[1]/div[1]/div[1]/p[1]")
+	@CacheLookup
+	WebElement badlogin_error;
+	
 	//Constructor checks if you are on the right page 
 	public LoginPage(WebDriver driver) throws InterruptedException {
 		super(driver);
@@ -79,6 +84,9 @@ public class LoginPage extends BasePage{
 	
 	public void clickLoginByEmail() {
 		a_loginbyemail.click();
+	}
+	public void loginerrorformIsDisplayed() {
+		badlogin_error.isDisplayed();
 	}
 
 }
