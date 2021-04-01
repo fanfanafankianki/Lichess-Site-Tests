@@ -26,7 +26,7 @@ public class ChessBasicsPage extends BasePage {
 		PageFactory.initElements(driver, this);
 		Thread.sleep(1000);
 		if(!driver.getCurrentUrl().equals("https://lichess.org/learn#/")) {
-			throw new IllegalStateException("This is not chess basics page! The current page is" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not chess basics page! The current page is " + driver.getCurrentUrl());
 		}
 	}
 	

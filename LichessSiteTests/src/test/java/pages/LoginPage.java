@@ -49,7 +49,7 @@ public class LoginPage extends BasePage{
 		PageFactory.initElements(driver, this);
 		Thread.sleep(1000);
 		if(!driver.getCurrentUrl().equals("https://lichess.org/login?referrer=/")) {
-			throw new IllegalStateException("This is not login page! The current page is" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not login page! The current page is " + driver.getCurrentUrl());
 		}
 
 	}

@@ -23,7 +23,7 @@ public class GamePage extends BasePage{
 		PageFactory.initElements(driver, this);
 		Thread.sleep(1000);
 		if(driver.getCurrentUrl().equals("https://lichess.org/")) {
-			throw new IllegalStateException("This is not game page! The current page is" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not game page! The current page is " + driver.getCurrentUrl());
 		}
 	}
 	

@@ -24,7 +24,7 @@ public class VideoPage extends BasePage{
 		PageFactory.initElements(driver, this);
 		Thread.sleep(1000);
 		if(!driver.getCurrentUrl().equals("https://lichess.org/video")) {
-			throw new IllegalStateException("This is not video page! The current page is" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not video page! The current page is " + driver.getCurrentUrl());
 		}
 	}
 	
