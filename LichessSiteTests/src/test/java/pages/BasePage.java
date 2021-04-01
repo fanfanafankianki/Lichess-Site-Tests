@@ -536,4 +536,14 @@ public class BasePage {
 		actions.pause(1000);
 		actions.click().build().perform();
 	}
+	
+	// Search icon -> input available after click
+	
+	public void search_inputisDisplayed() {
+		hov_search_input.isDisplayed();
+	}
+	
+	public void search_inputsendKeys(String keys) {
+		hov_search_input.sendKeys(keys);
+	}
 }

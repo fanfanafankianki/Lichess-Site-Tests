@@ -6,7 +6,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class TvGamesPage extends BasePage{
+public class AccountPage extends BasePage{
 	
 	protected WebDriver driver;
 	
@@ -14,22 +14,22 @@ public class TvGamesPage extends BasePage{
 	//Main content elements
 	//
 	
-	@FindBy(xpath="//main[@class='page-menu tv-games']")
+	@FindBy(xpath="//div[@class='page-menu__content box user-show']")
 	@CacheLookup
-	WebElement section_tvgames;
+	WebElement section_account;
 	
 	//Constructor checks if you are on the right page 
-	public TvGamesPage (WebDriver driver) throws InterruptedException {
+	public AccountPage (WebDriver driver) throws InterruptedException {
 		super(driver);
 		PageFactory.initElements(driver, this);
 		Thread.sleep(1000);
-		if(!driver.getCurrentUrl().equals("https://lichess.org/games")) {
-			throw new IllegalStateException("This is not games page! The current page is " + driver.getCurrentUrl());
+		if(!driver.getCurrentUrl().contains("https://lichess.org/@/")) {
+			throw new IllegalStateException("This is not account page! The current page is " + driver.getCurrentUrl());
 		}
 	}
 	
-	public void tvgamesSectionIsDisplayed() {
-		section_tvgames.isDisplayed();
+	public void accountSectionIsDisplayed() {
+		section_account.isDisplayed();
 		
 	}
 }

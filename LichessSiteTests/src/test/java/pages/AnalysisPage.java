@@ -24,7 +24,7 @@ public class AnalysisPage extends BasePage{
 		PageFactory.initElements(driver, this);
 		Thread.sleep(1000);
 		if(!(driver.getCurrentUrl().equals("https://lichess.org/analysis") || driver.getCurrentUrl().equals("https://lichess.org/analysis#explorer"))) {
-			throw new IllegalStateException("This is not analysis page! The current page is" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not analysis page! The current page is " + driver.getCurrentUrl());
 		}
 	}
 	

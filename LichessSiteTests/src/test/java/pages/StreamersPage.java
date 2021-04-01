@@ -24,7 +24,7 @@ public class StreamersPage extends BasePage{
 		PageFactory.initElements(driver, this);
 		Thread.sleep(1000);
 		if(!driver.getCurrentUrl().equals("https://lichess.org/streamer")) {
-			throw new IllegalStateException("This is not streamer page! The current page is" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not streamer page! The current page is " + driver.getCurrentUrl());
 		}
 	}
 	

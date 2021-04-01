@@ -24,7 +24,7 @@ public class TvPage extends BasePage{
 		PageFactory.initElements(driver, this);
 		Thread.sleep(1000);
 		if(!driver.getCurrentUrl().equals("https://lichess.org/tv")) {
-			throw new IllegalStateException("This is not tv page! The current page is" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not tv page! The current page is " + driver.getCurrentUrl());
 		}
 	}
 	
