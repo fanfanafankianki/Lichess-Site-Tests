@@ -2,8 +2,8 @@
 Test of lichess site made with Selenium, Java and Cucumber.
 
 To run tests you will need:
-Maven
-Cucumber Java Plugin (such as "Cucumber Eclipse Plugin" which you can find in Eclipse IDE in Marketplace)
+1. Maven
+2. Cucumber Java Plugin (such as "Cucumber Eclipse Plugin" which you can find in Eclipse IDE in Marketplace)
 
 To run test you have to:
 1.Open command prompt
