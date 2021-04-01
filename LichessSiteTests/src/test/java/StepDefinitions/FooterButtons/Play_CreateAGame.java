@@ -27,7 +27,7 @@ public class Play_CreateAGame {
 		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Play_NewGame();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 
 	@And("user choose black pieces")

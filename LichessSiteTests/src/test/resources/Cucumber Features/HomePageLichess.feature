@@ -94,3 +94,99 @@ Feature: Features to test footer buttons redirections
     When user hovers over Learn and clicks on Coaches
     Then user is navigated to the Coaches page
     And coaches form is displayed
+
+  @Watch
+  Scenario: Check Watch option redirection
+    When user clicks on Watch
+    Then user is navigated to the TV page
+    And TV form is displayed
+
+  @Watch
+  Scenario: Check Watch -> Lichess TV option redirection
+    When user hovers over Watch and clicks on Lichess TV
+    Then user is navigated to the TV page
+    And TV form is displayed
+
+  @Watch
+  Scenario: Check Watch -> Current Games option redirection
+    When user hovers over Watch and clicks on Current Games
+    Then user is navigated to the games page
+    And TV games form is displayed
+
+  @Watch
+  Scenario: Check Watch -> Streamers option redirection
+    When user hovers over Watch and clicks on Streamers
+    Then user is navigated to the Streamer page
+    And streamer form is displayed
+
+  @Watch
+  Scenario: Check Watch -> Broadcasts option redirection
+    When user hovers over Watch and clicks on Broadcasts
+    Then user is navigated to the Broadcasts page
+    And broadcasts form is displayed
+
+  @Watch
+  Scenario: Check Watch -> Video option redirection
+    When user hovers over Watch and clicks on Video
+    Then user is navigated to the Video page
+    And Video form is displayed
+
+  @Community
+  Scenario: Check Community option redirection
+    When user clicks on Community
+    Then user is navigated to the Player page
+    And player form is displayed
+
+  @Community
+  Scenario: Check Community -> Players option redirection
+    When user hovers over Community and clicks on Players
+    Then user is navigated to the Player page
+    And player form is displayed
+
+  @Community
+  Scenario: Check Community -> Team option redirection
+    When user hovers over Community and clicks on Teams
+    Then user is navigated to the Teams page
+    And Teams form is displayed
+
+  @Community
+  Scenario: Check Community -> Forum option redirection
+    When user hovers over Community and clicks on Forum
+    Then user is navigated to the Forum page
+    And Forum form is displayed
+
+  @Tools
+  Scenario: Check Tools redirection
+    When user clicks on Tools
+    Then user is navigated to the Analysis page
+    And Analysis form is displayed
+
+  @Tools
+  Scenario: Check Tools -> Analysis Board option redirection
+    When user hovers over Tools and clicks on Analysis Board
+    Then user is navigated to the Analysis page
+    And Analysis form is displayed
+
+  @Tools
+  Scenario: Check Tools -> Opening explorer option redirection
+    When user hovers over Tools and clicks on Opening explorer
+    Then user is navigated to the Analysis page
+    And Analysis form is displayed
+
+  @Tools
+  Scenario: Check Tools -> Board editor option redirection
+    When user hovers over Tools and clicks on Board editor
+    Then user is navigated to the Editor page
+    And Editor form is displayed
+
+  @Tools1
+  Scenario: Check Tools -> Import game option redirection
+    When user hovers over Tools and clicks on Import game
+    Then user is navigated to the Import page
+    And Import form is displayed
+
+  @Tools1
+  Scenario: Check Tools -> Advanced search option redirection
+    When user hovers over Tools and clicks on Advanced search
+    Then user is navigated to the Search page
+    And Search form is displayed

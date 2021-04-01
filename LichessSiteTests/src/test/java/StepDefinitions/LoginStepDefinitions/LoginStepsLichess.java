@@ -28,6 +28,14 @@ public class LoginStepsLichess {
 		driver = DriverInstance.setUp();
 		driver.navigate().to("https://lichess.org/login?referrer=/");
 	}
+	
+	@When("user enters unvalid username and password")
+	public void user_enters_unvalid_username_and_password() throws InterruptedException {
+		login = new LoginPage(driver);
+		login.enterUsername("Habiba");
+		login.enterPassword("Kebaby123");
+		Thread.sleep(2000);
+	}
 
 	@When("user enters valid (.*) and (.*)$")
 	public void user_enters_valid_username_and_password(String username, String password) throws InterruptedException {
@@ -47,6 +55,13 @@ public class LoginStepsLichess {
 	@Then("user is navigated to the home page")
 	public void user_is_navigated_to_the_home_page() throws InterruptedException {
 		home = new HomePage(driver);
+	}
+	
+	@Then("login error text is displayed")
+	public void login_error_text_is_displayed() throws InterruptedException {
+		login = new LoginPage(driver);
+		login.loginerrorformIsDisplayed();
+		DriverInstance.teardown(driver);
 	}
 
 	@And("user username is displayed in right corner")
