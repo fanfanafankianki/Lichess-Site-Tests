@@ -1,4 +1,4 @@
-package StepDefinitions.PlayButtonStepDefinitions;
+package StepDefinitions.FooterButtons;
 
 
 import org.openqa.selenium.WebDriver;
@@ -46,7 +46,6 @@ public class Play_CreateAGame {
 	public void game_board_is_displayed() {
 		driver = DriverInstance.getDriver();
 		game.gameboardIsDisplayed();
-		System.out.println(driver);
 		DriverInstance.teardown(driver);
 	}
 	
