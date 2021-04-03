@@ -21,11 +21,10 @@ public class Play_SimultaneousExhibitions {
 	
 	public Play_SimultaneousExhibitions(StepDefinitions.DriverInstance DriverInstance) {
 		this.DriverInstance=DriverInstance;
+		driver = DriverInstance.getDriver();
 	}
 	@When("user hovers over Play and clicks on Simultaneous exhibitions")
 	public void user_hovers_over_play_and_clicks_on_simultaneous_exhibitions() throws InterruptedException {
-
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Play_Simultan();
 		Thread.sleep(2000);
@@ -33,12 +32,10 @@ public class Play_SimultaneousExhibitions {
 
 	@Then("user is navigated to the simultaneous exhibitions page")
 	public void user_is_navigated_to_the_simultaneous_exhibitions_page() throws InterruptedException {
-		driver = DriverInstance.getDriver();
 		simul = new SimultaneousExhibitionsPage(driver);
 	}
 	@And("simultaneous exhibitions is displayed")
 	public void simultaneous_exhibitions_is_displayed() {
-		driver = DriverInstance.getDriver();
 		simul.simultournamentSectionIsDisplayed();
 		DriverInstance.teardown(driver);
 	}

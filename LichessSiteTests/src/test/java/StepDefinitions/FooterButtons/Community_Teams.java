@@ -18,11 +18,11 @@ public class Community_Teams {
 
 	public Community_Teams(StepDefinitions.DriverInstance DriverInstance) {
 		this.DriverInstance=DriverInstance;
+		driver = DriverInstance.getDriver();
 	}
 
 	@When("user hovers over Community and clicks on Teams")
 	public void user_hovers_over_community_and_clicks_on_teams() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Community_Teams();
 		Thread.sleep(3000);
@@ -30,13 +30,11 @@ public class Community_Teams {
 
 	@Then("user is navigated to the Teams page")
 	public void user_is_navigated_to_the_teams_page() throws InterruptedException {
-		driver = DriverInstance.getDriver();
 		teams = new TeamsPage(driver);
 	}
 
 	@And("Teams form is displayed")
 	public void teams_form_is_displayed() {
-		driver = DriverInstance.getDriver();
 		teams.teamsSectionIsDisplayed();
 		DriverInstance.teardown(driver);
 	}

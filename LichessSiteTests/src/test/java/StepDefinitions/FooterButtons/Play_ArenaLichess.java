@@ -21,7 +21,7 @@ public class Play_ArenaLichess {
 	
 	public Play_ArenaLichess(StepDefinitions.DriverInstance DriverInstance) {
 		this.DriverInstance=DriverInstance;
-		
+		driver = DriverInstance.getDriver();
 	}
 
 	@Given("browser is open")
@@ -31,14 +31,12 @@ public class Play_ArenaLichess {
 	
 	@And("user is on home page")
 	public void user_is_on_home_page() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		driver.navigate().to("https://lichess.org/");
 		Thread.sleep(2000);
 	}
 
 	@When("user hovers over Play and clicks on Arena tournaments")
 	public void user_hovers_over_play_and_clicks_on_arena_tournaments() throws InterruptedException {
-		driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Play_Arena();
 		Thread.sleep(3000);
@@ -52,7 +50,6 @@ public class Play_ArenaLichess {
 
 	@And("tournament section is displayed")
 	public void tournament_section_is_displayed() {
-		driver = DriverInstance.getDriver();
 		arena.tournamentSectionIsDisplayed();
 		DriverInstance.teardown(driver);
 	}

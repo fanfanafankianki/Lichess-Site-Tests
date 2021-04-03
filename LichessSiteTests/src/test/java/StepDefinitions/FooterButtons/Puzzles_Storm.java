@@ -20,11 +20,11 @@ public class Puzzles_Storm {
 
 	public Puzzles_Storm(StepDefinitions.DriverInstance DriverInstance) {
 		this.DriverInstance=DriverInstance;
+		driver = DriverInstance.getDriver();
 	}
 
 	@When("user hovers over Puzzles and clicks on Puzzle storm")
 	public void user_hovers_over_puzzles_and_clicks_on_puzzle_storm() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Puzzles_Storm();
 		Thread.sleep(3000);
@@ -32,13 +32,11 @@ public class Puzzles_Storm {
 
 	@Then("user is navigated to the Puzzle storm page")
 	public void user_is_navigated_to_the_puzzle_storm_page() throws InterruptedException {
-		driver = DriverInstance.getDriver();
 		puzzlestorm = new PuzzleStormPage(driver);
 	}
 
 	@And("puzzle storm gameboard is displayed")
 	public void puzzle_storm_gameboard_is_displayed() {
-		driver = DriverInstance.getDriver();
 		puzzlestorm.puzzlestormgameboardIsDisplayed();
 		DriverInstance.teardown(driver);
 	}
