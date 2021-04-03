@@ -18,11 +18,11 @@ public class Watch_LichessTV {
 
 	public Watch_LichessTV(StepDefinitions.DriverInstance DriverInstance) {
 		this.DriverInstance=DriverInstance;
+		driver = DriverInstance.getDriver();
 	}
 	
 	@When("user clicks on Watch")
 	public void user_clicks_on_watch() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.clickWatch();
 		Thread.sleep(3000);
@@ -30,7 +30,6 @@ public class Watch_LichessTV {
 
 	@When("user hovers over Watch and clicks on Lichess TV")
 	public void user_hovers_over_watch_and_clicks_on_lichess_tv() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Watch_TV();
 		Thread.sleep(3000);
@@ -38,13 +37,11 @@ public class Watch_LichessTV {
 
 	@Then("user is navigated to the TV page")
 	public void user_is_navigated_to_the_tv_page() throws InterruptedException {
-		driver = DriverInstance.getDriver();
 		tv = new TvPage(driver);
 	}
 
 	@And("TV form is displayed")
 	public void tv_form_is_displayed() {
-		driver = DriverInstance.getDriver();
 		tv.tvSectionIsDisplayed();
 		DriverInstance.teardown(driver);
 	}

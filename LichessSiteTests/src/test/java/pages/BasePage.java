@@ -296,9 +296,9 @@ public class BasePage {
 	public void hover_Play_Arena() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_play_arenatournaments);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
@@ -314,18 +314,18 @@ public class BasePage {
 	public void hover_Play_Swiss() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_play_swisstournaments);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Play_Simultan() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_play_simultan);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
@@ -334,36 +334,36 @@ public class BasePage {
 	public void hover_Puzzles_Puzzles() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_puzzles);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_puzzles_puzzles);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Puzzles_Dashboard() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_puzzles);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_puzzles_dashboard);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Puzzles_Racer() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_puzzles);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_puzzles_racer);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Puzzles_Storm() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_puzzles);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_puzzles_storm);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
@@ -372,45 +372,45 @@ public class BasePage {
 	public void hover_Learn_ChessBasics() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_learn);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_learn_chessbasics);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Learn_Practice() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_learn);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_learn_practice);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Learn_Coordinates() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_learn);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_learn_coordinates);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Learn_Study() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_learn);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_learn_study);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Learn_Coaches() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_learn);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_learn_coaches);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 
@@ -419,45 +419,45 @@ public class BasePage {
 	public void hover_Watch_TV() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_watch);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_watch_lichesstv);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Watch_Games() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_watch);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_watch_games);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Watch_Streamers() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_watch);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_watch_streamers);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Watch_Broadcasts() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_watch);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_watch_broadcasts);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Watch_Video() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_watch);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_watch_video);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
@@ -466,27 +466,27 @@ public class BasePage {
 	public void hover_Community_Players() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_community);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_community_players);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 
 	public void hover_Community_Teams() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_community);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_community_teams);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Community_Forum() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_community);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_community_forum);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 
@@ -495,45 +495,45 @@ public class BasePage {
 	public void hover_Tools_Analysis() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_tools);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_tools_analysisboard);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Tools_Explorer() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_tools);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_tools_explorer);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Tools_BoardEditor() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_tools);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_tools_boardeditor);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Tools_Import() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_tools);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_tools_importgame);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	
 	public void hover_Tools_Search() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_tools);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.moveToElement(hov_tools_search);
-		actions.pause(1000);
+		actions.pause(1500);
 		actions.click().build().perform();
 	}
 	

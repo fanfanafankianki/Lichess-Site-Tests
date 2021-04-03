@@ -17,14 +17,15 @@ public class Play_CreateAGame {
 	GamePage game;
 	ArenaPage arena;
 	private DriverInstance DriverInstance;
-	
+
+
 	public Play_CreateAGame(StepDefinitions.DriverInstance DriverInstance) {
 		this.DriverInstance=DriverInstance;
+		driver = DriverInstance.getDriver();
 	}
 
 	@When("user hovers over Play and clicks on Create a game")
 	public void user_hovers_over_play_and_clicks_on_create_a_game() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Play_NewGame();
 		Thread.sleep(3000);
@@ -38,13 +39,11 @@ public class Play_CreateAGame {
 
 	@Then("game page is opened")
 	public void game_page_is_opened() throws InterruptedException {
-		driver = DriverInstance.getDriver();
 		game = new GamePage(driver);
 	}
 
 	@And("game board is displayed")
 	public void game_board_is_displayed() {
-		driver = DriverInstance.getDriver();
 		game.gameboardIsDisplayed();
 		DriverInstance.teardown(driver);
 	}

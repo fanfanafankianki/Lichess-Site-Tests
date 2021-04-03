@@ -21,24 +21,22 @@ public class Play_SwissTournaments {
 	
 	public Play_SwissTournaments(StepDefinitions.DriverInstance DriverInstance) {
 		this.DriverInstance=DriverInstance;
+		driver = DriverInstance.getDriver();
 	}
 	
 	@When("user hovers over Play and clicks on Swiss tournaments")
 	public void user_hovers_over_play_and_clicks_on_swiss_tournaments() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Play_Swiss();
-		Thread.sleep(2000);
 	}
+	
 	@Then("user is navigated to the swiss tournaments page")
 	public void user_is_navigated_to_the_swiss_tournaments_page() throws InterruptedException {
-		driver = DriverInstance.getDriver();
 		swiss = new SwissTournamentsPage(driver);
 	}
 
 	@And("swiss tournament section is displayed")
 	public void swiss_tournament_section_is_displayed() {
-		driver = DriverInstance.getDriver();
 		swiss.swisstournamentSectionIsDisplayed();
 		DriverInstance.teardown(driver);
 	}

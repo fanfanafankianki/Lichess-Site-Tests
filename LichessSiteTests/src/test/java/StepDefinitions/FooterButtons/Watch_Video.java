@@ -18,11 +18,11 @@ public class Watch_Video {
 
 	public Watch_Video(StepDefinitions.DriverInstance DriverInstance) {
 		this.DriverInstance=DriverInstance;
+		driver = DriverInstance.getDriver();
 	}
 
 	@When("user hovers over Watch and clicks on Video")
 	public void user_hovers_over_watch_and_clicks_on_video() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Watch_Video();
 		Thread.sleep(3000);
@@ -30,13 +30,11 @@ public class Watch_Video {
 
 	@Then("user is navigated to the Video page")
 	public void user_is_navigated_to_the_video_page() throws InterruptedException {
-		driver = DriverInstance.getDriver();
 		video = new VideoPage(driver);
 	}
 
 	@And("Video form is displayed")
 	public void video_form_is_displayed() {
-		driver = DriverInstance.getDriver();
 		video.videoSectionIsDisplayed();
 		DriverInstance.teardown(driver);
 	}

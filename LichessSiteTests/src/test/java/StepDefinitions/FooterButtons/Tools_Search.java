@@ -18,11 +18,11 @@ public class Tools_Search {
 
 	public Tools_Search(StepDefinitions.DriverInstance DriverInstance) {
 		this.DriverInstance=DriverInstance;
+		driver = DriverInstance.getDriver();
 	}
 
 	@When("user hovers over Tools and clicks on Advanced search")
 	public void user_hovers_over_tools_and_clicks_on_advanced_search() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Tools_Search();
 		Thread.sleep(3000);
@@ -30,13 +30,11 @@ public class Tools_Search {
 
 	@Then("user is navigated to the Search page")
 	public void user_is_navigated_to_the_search_page() throws InterruptedException {
-		driver = DriverInstance.getDriver();
 		search = new SearchPage(driver);
 	}
 
 	@And("Search form is displayed")
 	public void search_form_is_displayed() {
-		driver = DriverInstance.getDriver();
 		search.searchSectionIsDisplayed();
 		DriverInstance.teardown(driver);
 	}

@@ -20,11 +20,11 @@ public class Puzzles_Puzzles {
 
 	public Puzzles_Puzzles(StepDefinitions.DriverInstance DriverInstance) {
 		this.DriverInstance=DriverInstance;
+		driver = DriverInstance.getDriver();
 	}
 	
 	@When("user clicks on Puzzles")
 	public void user_clicks_on_puzzles() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.clickPuzzles();
 		Thread.sleep(3000);
@@ -32,7 +32,6 @@ public class Puzzles_Puzzles {
 
 	@When("user hovers over Puzzles and clicks on Puzzles")
 	public void user_hovers_over_puzzles_and_clicks_on_puzzles() throws InterruptedException {
-		WebDriver driver = DriverInstance.getDriver();
 		home = new HomePage(driver);
 		home.hover_Puzzles_Puzzles();
 		Thread.sleep(3000);
@@ -40,13 +39,11 @@ public class Puzzles_Puzzles {
 
 	@Then("user is navigated to the Puzzles page")
 	public void user_is_navigated_to_the_puzzles_page() throws InterruptedException {
-		driver = DriverInstance.getDriver();
 		puzzle = new PuzzlePage(driver);
 	}
 
 	@And("puzzle gameboard is displayed")
 	public void puzzle_gameboard_is_displayed() {
-		driver = DriverInstance.getDriver();
 		puzzle.puzzlegameboardIsDisplayed();
 		DriverInstance.teardown(driver);
 	}

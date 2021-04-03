@@ -14,7 +14,7 @@ public class TvPage extends BasePage{
 	//Main content elements
 	//
 	
-	@FindBy(xpath="//div[@class='cg-wrap orientation-white manipulable']")
+	@FindBy(xpath="//div[@class='round__app variant-standard']")
 	@CacheLookup
 	WebElement section_tv;
 	
