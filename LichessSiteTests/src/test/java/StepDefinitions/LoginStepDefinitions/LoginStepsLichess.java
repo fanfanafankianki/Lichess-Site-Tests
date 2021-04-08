@@ -3,7 +3,7 @@ package StepDefinitions.LoginStepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 
-import StepDefinitions.DriverInstance;
+import StepDefinitions.Utility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,22 +16,22 @@ public class LoginStepsLichess {
 	WebDriver driver = null;
 	LoginPage login;
 	HomePage home;
-	private DriverInstance DriverInstance;
+	private Utility utility;
 	
-	public LoginStepsLichess(StepDefinitions.DriverInstance DriverInstance) {
-		this.DriverInstance=DriverInstance;
-		
+	public LoginStepsLichess(StepDefinitions.Utility utility) {
+		this.utility=utility;
+		this.driver=utility.driver;
 	}
 	
 	@Given("user is on login page")
-	public void user_is_on_login_page() {
-		driver = DriverInstance.setUp();
+	public void user_is_on_login_page() throws InterruptedException {
+		driver=utility.getDriver();
 		driver.navigate().to("https://lichess.org/login?referrer=/");
 	}
 	
 	@When("user enters unvalid username and password")
 	public void user_enters_unvalid_username_and_password() throws InterruptedException {
-		login = new LoginPage(driver);
+		login = utility.getLoginPage();
 		login.enterUsername("Habiba");
 		login.enterPassword("Kebaby123");
 		Thread.sleep(2000);
@@ -39,7 +39,7 @@ public class LoginStepsLichess {
 
 	@When("user enters valid (.*) and (.*)$")
 	public void user_enters_valid_username_and_password(String username, String password) throws InterruptedException {
-		login = new LoginPage(driver);
+		login = utility.getLoginPage();
 		login.enterUsername(username);
 		login.enterPassword(password);
 		Thread.sleep(2000);
@@ -54,19 +54,19 @@ public class LoginStepsLichess {
 
 	@Then("user is navigated to the home page")
 	public void user_is_navigated_to_the_home_page() throws InterruptedException {
-		home = new HomePage(driver);
+		home = utility.getHomePage();
 	}
 	
 	@Then("login error text is displayed")
 	public void login_error_text_is_displayed() throws InterruptedException {
-		login = new LoginPage(driver);
+		login = utility.getLoginPage();
 		login.loginerrorformIsDisplayed();
-		DriverInstance.teardown(driver);
+		utility.driverTeardown(driver);
 	}
 
 	@And("user username is displayed in right corner")
 	public void user_username_is_displayed_in_right_corner() {
 		home.usernameIsDisplayed();
-		DriverInstance.teardown(driver);
+		utility.driverTeardown(driver);
 	}
 }

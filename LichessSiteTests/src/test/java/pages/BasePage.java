@@ -37,9 +37,6 @@ public class BasePage {
 	@FindBy(xpath="//a[@href='/?any#hook']")
 	WebElement hov_play_createnewgame;
 	
-	@FindBy(xpath="	//div[1]/form[1]/div[3]/button[1]")
-	WebElement hov_play_createnewgame_chooseblack;
-	
 	@FindBy(xpath="//section/div/a[@href='/tournament']")
 	@CacheLookup
 	WebElement hov_play_arenatournaments;
@@ -283,12 +280,6 @@ public class BasePage {
 	
 	public void clickSettings() {
 		hov_settings.click();
-	}
-	
-	// Play -> New Game -> Choose black
-	public void creategame_chooseblack() throws InterruptedException {
-		hov_play_createnewgame_chooseblack.click();
-		Thread.sleep(10000);
 	}
 	
 	// Play -> hovered options click

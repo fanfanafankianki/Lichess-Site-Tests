@@ -3,7 +3,7 @@ package StepDefinitions.FooterButtons;
 
 import org.openqa.selenium.WebDriver;
 
-import StepDefinitions.DriverInstance;
+import StepDefinitions.Utility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,36 +14,35 @@ public class Watch_LichessTV {
 	WebDriver driver;
 	HomePage home;
 	TvPage tv;
-	private DriverInstance DriverInstance;
+	private Utility utility;
 
-	public Watch_LichessTV(StepDefinitions.DriverInstance DriverInstance) {
-		this.DriverInstance=DriverInstance;
-		driver = DriverInstance.getDriver();
+	public Watch_LichessTV(StepDefinitions.Utility utility) {
+		this.utility=utility;
+		this.driver=utility.driver;
 	}
-	
 	@When("user clicks on Watch")
 	public void user_clicks_on_watch() throws InterruptedException {
-		home = new HomePage(driver);
+		home = utility.getHomePage();
 		home.clickWatch();
 		Thread.sleep(3000);
 	}
 
 	@When("user hovers over Watch and clicks on Lichess TV")
 	public void user_hovers_over_watch_and_clicks_on_lichess_tv() throws InterruptedException {
-		home = new HomePage(driver);
+		home = utility.getHomePage();
 		home.hover_Watch_TV();
 		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the TV page")
 	public void user_is_navigated_to_the_tv_page() throws InterruptedException {
-		tv = new TvPage(driver);
+		tv = utility.getTvPage();
 	}
 
 	@And("TV form is displayed")
 	public void tv_form_is_displayed() {
 		tv.tvSectionIsDisplayed();
-		DriverInstance.teardown(driver);
+		utility.driverTeardown(driver);
 	}
 
 

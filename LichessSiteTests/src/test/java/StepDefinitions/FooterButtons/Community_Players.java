@@ -3,7 +3,7 @@ package StepDefinitions.FooterButtons;
 
 import org.openqa.selenium.WebDriver;
 
-import StepDefinitions.DriverInstance;
+import StepDefinitions.Utility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,36 +14,36 @@ public class Community_Players {
 	WebDriver driver;
 	HomePage home;
 	PlayerPage player;
-	private DriverInstance DriverInstance;
+	private Utility utility;
 
-	public Community_Players(StepDefinitions.DriverInstance DriverInstance) {
-		this.DriverInstance=DriverInstance;
-		driver = DriverInstance.getDriver();
+	public Community_Players(StepDefinitions.Utility utility) {
+		this.utility=utility;
+		this.driver=utility.driver;
 	}
 	
 	@When("user clicks on Community")
 	public void user_clicks_on_community() throws InterruptedException {
-		home = new HomePage(driver);
+		home = utility.getHomePage();
 		home.clickCommunity();
 		Thread.sleep(3000);
 	}
 
 	@When("user hovers over Community and clicks on Players")
 	public void user_hovers_over_community_and_clicks_on_players() throws InterruptedException {
-		home = new HomePage(driver);
+		home = utility.getHomePage();
 		home.hover_Community_Players();
 		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Player page")
 	public void user_is_navigated_to_the_player_page() throws InterruptedException {
-		player = new PlayerPage(driver);
+		player = utility.getPlayerPage();
 	}
 
 	@And("player form is displayed")
 	public void player_form_is_displayed() {
 		player.playerSectionIsDisplayed();
-		DriverInstance.teardown(driver);
+		utility.driverTeardown(driver);
 	}
 
 

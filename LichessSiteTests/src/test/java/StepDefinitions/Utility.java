@@ -220,7 +220,7 @@ public class Utility {
 	      return (trainingdaily == null) ? trainingdaily = new TrainingDailyPage(driver) : trainingdaily;
 	      }
 	
-	public TvGamesPage getTvGamesPagePage() throws InterruptedException{
+	public TvGamesPage getTvGamesPage() throws InterruptedException{
 	      return (tvgames == null) ? tvgames = new TvGamesPage(driver) : tvgames;
 	      }
 	
