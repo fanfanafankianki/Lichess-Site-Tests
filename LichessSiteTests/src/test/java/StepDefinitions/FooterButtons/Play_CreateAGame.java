@@ -3,30 +3,29 @@ package StepDefinitions.FooterButtons;
 
 import org.openqa.selenium.WebDriver;
 
-import StepDefinitions.DriverInstance;
+import StepDefinitions.Utility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.ArenaPage;
 import pages.GamePage;
 import pages.HomePage;
 
-public class Play_CreateAGame {
+public class Play_CreateAGame extends Utility {
 	WebDriver driver;
 	HomePage home;
 	GamePage game;
-	ArenaPage arena;
-	private DriverInstance DriverInstance;
+	private Utility utility;
 
 
-	public Play_CreateAGame(StepDefinitions.DriverInstance DriverInstance) {
-		this.DriverInstance=DriverInstance;
-		driver = DriverInstance.getDriver();
+	public Play_CreateAGame(StepDefinitions.Utility utility) {
+		this.utility=utility;
+		this.driver=utility.driver;
 	}
 
 	@When("user hovers over Play and clicks on Create a game")
 	public void user_hovers_over_play_and_clicks_on_create_a_game() throws InterruptedException {
-		home = new HomePage(driver);
+		
+		home=utility.getHomePage();
 		home.hover_Play_NewGame();
 		Thread.sleep(3000);
 	}
@@ -39,13 +38,13 @@ public class Play_CreateAGame {
 
 	@Then("game page is opened")
 	public void game_page_is_opened() throws InterruptedException {
-		game = new GamePage(driver);
+		game = utility.getGamePage();
 	}
 
 	@And("game board is displayed")
 	public void game_board_is_displayed() {
 		game.gameboardIsDisplayed();
-		DriverInstance.teardown(driver);
+		utility.driverTeardown(driver);
 	}
 	
 	
