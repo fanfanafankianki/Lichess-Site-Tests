@@ -8,7 +8,6 @@ To run tests you will need:
 To run test you have to:
 1. Open command prompt
 2. Change directory to project
-3. Run command "mvn test" - if you want to run all tests 
-   or 
-   command "mvn test -Dcucumber.filter.tags="@TAGNAME"        Available tags are = @Play, @Puzzles, @Learn, @Watch, @Community, @Tools, @Search, @HomeMain, @Login.
+3. Run command "mvn test" - if you want to run all tests or command "mvn test -Dcucumber.filter.tags="@TAGNAME"
+Available tags are = @Play, @Puzzles, @Learn, @Watch, @Community, @Tools, @Search, @HomeMain, @Login.
  
