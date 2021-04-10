@@ -34,7 +34,6 @@ public class LoginStepsLichess {
 		login = utility.getLoginPage();
 		login.enterUsername("Habiba");
 		login.enterPassword("Kebaby123");
-		Thread.sleep(2000);
 	}
 
 	@When("user enters valid (.*) and (.*)$")
@@ -42,7 +41,6 @@ public class LoginStepsLichess {
 		login = utility.getLoginPage();
 		login.enterUsername(username);
 		login.enterPassword(password);
-		Thread.sleep(2000);
 	}
 
 	@And("click on login button")

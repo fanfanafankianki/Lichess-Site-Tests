@@ -14,7 +14,7 @@ public class ArenaPage extends BasePage {
 	//Main content elements
 	//
 	
-	@FindBy(xpath="//main[1]/section[1]")
+	@FindBy(xpath="//main/section[@class='tour-home__schedule box']")
 	@CacheLookup
 	WebElement section_tournament;
 	

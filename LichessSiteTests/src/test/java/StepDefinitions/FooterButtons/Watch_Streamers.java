@@ -16,6 +16,7 @@ public class Watch_Streamers {
 	StreamersPage streamers;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Watch_Streamers(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

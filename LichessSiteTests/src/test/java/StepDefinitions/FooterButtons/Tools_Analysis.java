@@ -16,6 +16,7 @@ public class Tools_Analysis {
 	AnalysisPage analysis;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Tools_Analysis(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

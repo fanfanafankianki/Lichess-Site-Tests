@@ -17,6 +17,7 @@ public class Play_SimultaneousExhibitions {
 	SimultaneousExhibitionsPage simul;
 	private Utility utility;
 	
+	//Constructor with dependency injection
 	public Play_SimultaneousExhibitions(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

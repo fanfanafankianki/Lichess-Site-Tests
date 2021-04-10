@@ -14,6 +14,7 @@ public class Home_CreateAGame {
 	ForumPage forum;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Home_CreateAGame(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

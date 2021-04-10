@@ -16,6 +16,7 @@ public class Puzzles_Dashboard {
 	SignupPage register;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Puzzles_Dashboard(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

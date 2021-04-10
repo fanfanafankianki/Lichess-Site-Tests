@@ -14,73 +14,73 @@ public class HomePage extends BasePage {
 	//Main content elements
 	//
 	
-	@FindBy(xpath="//main/div/div/a[@href='/setup/hook']")
+	@FindBy(xpath="//a[@href='/setup/hook']")
 	@CacheLookup
 	WebElement a_newgame;
 	
-	@FindBy(xpath="//main/div/div/a[@href='/setup/friend']")
+	@FindBy(xpath="//a[@href='/setup/friend']")
 	@CacheLookup
 	WebElement a_playwithfriend;
 
-	@FindBy(xpath="//main/div/div/a[@href='/setup/ai']")
+	@FindBy(xpath="//a[@href='/setup/ai']")
 	@CacheLookup
 	WebElement a_playwithcomp;
 	
-	@FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/form[1]/div[3]/button[1]")
+	@FindBy(xpath="//div[3]/button[@class='color-submits__button button button-metal black']")
 	@CacheLookup
 	WebElement a_newgame_chooseblack;
 
-	@FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/form[1]/div[4]/button[1]")
+	@FindBy(xpath="//div[4]/button[@class='color-submits__button button button-metal black']")
 	@CacheLookup
 	WebElement a_playwithfriend_chooseblack;
 	
-	@FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/form[1]/div[5]/button[1]")
+	@FindBy(xpath="//div[5]/button[@class='color-submits__button button button-metal black']")
 	@CacheLookup
 	WebElement a_playwithcomp_chooseblack;
 	
 	//Main menu elements
 	
-	@FindBy(xpath=" //body[1]/div[2]/main[1]/div[2]/div[1]/span[1]")
+	@FindBy(xpath="//div[@class='tabs-horiz']/span[1]")
 	@CacheLookup
 	WebElement span_quick;
 	
-	@FindBy(xpath=" //body[1]/div[2]/main[1]/div[2]/div[1]/span[2]")
+	@FindBy(xpath="//div[@class='tabs-horiz']/span[2]")
 	@CacheLookup
 	WebElement span_lobby;
 
-	@FindBy(xpath=" //body[1]/div[2]/main[1]/div[2]/div[1]/span[3]")
+	@FindBy(xpath="//div[@class='tabs-horiz']/span[3]")
 	@CacheLookup
 	WebElement span_correspondence;
 	
 	//Quick 1+0
 	
-	@FindBy(xpath="//main[1]/div[2]/div[2]/div[@data-id='1+0']")
+	@FindBy(xpath="//div[@data-id='1+0']")
 	@CacheLookup
 	WebElement span_quick1and0;
 	
 	// Left and right board elements
 	
-	@FindBy(xpath="//main/div[4]/a[1]/span[2]/cg-helper[1]/cg-container[1]/cg-board[1]")
+	@FindBy(xpath="//a[@href='/tv']/span/cg-helper/cg-container/cg-board")
 	@CacheLookup
 	WebElement left_board;
 	
-	@FindBy(xpath="//main/a[1]/span[2]/cg-helper[1]/cg-container[1]/cg-board[1]")
+	@FindBy(xpath="//span[@class='mini-board mini-board--init cg-wrap is2d orientation-white']//cg-board")
 	@CacheLookup
 	WebElement right_board;
 	
 	//Donate and Swag Store elements
 	
-	@FindBy(xpath="//main/div/a[@href='/patron']")
+	@FindBy(xpath="//a[@href='/patron']")
 	@CacheLookup
 	WebElement a_patron;
 	
-	@FindBy(xpath="//main/div/a[@href='https://shop.spreadshirt.com/lichess-org']")
+	@FindBy(xpath="//a[@href='https://shop.spreadshirt.com/lichess-org']")
 	@CacheLookup
 	WebElement a_swagstore;
 	
 	//Play hover -> Create new game -> Black side
 	
-	@FindBy(xpath="	//div[1]/form[1]/div[3]/button[1]")
+	@FindBy(xpath="//div[3]/button[@class='color-submits__button button button-metal black']")
 	WebElement hov_play_createnewgame_chooseblack;
 	
 	//Constructor checks if you are on the right page 
@@ -103,7 +103,6 @@ public class HomePage extends BasePage {
 			String s = driver.getCurrentUrl();
 		    if (s.equals("https://lichess.org/")) {
 		    	Thread.sleep(1000);
-		    	System.out.println(driver.getCurrentUrl());
 		    } else if(!(s.equals("https://lichess.org/"))){
 		        break;
 		    }

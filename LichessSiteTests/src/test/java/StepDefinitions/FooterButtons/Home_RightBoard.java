@@ -18,6 +18,7 @@ public class Home_RightBoard {
 	TrainingDailyPage training;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Home_RightBoard(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

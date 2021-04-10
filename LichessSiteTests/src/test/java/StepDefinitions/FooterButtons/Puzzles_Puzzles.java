@@ -16,6 +16,7 @@ public class Puzzles_Puzzles {
 	PuzzlePage puzzle;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Puzzles_Puzzles(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

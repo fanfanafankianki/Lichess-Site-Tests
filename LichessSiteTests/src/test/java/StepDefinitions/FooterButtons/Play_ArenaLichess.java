@@ -18,7 +18,7 @@ public class Play_ArenaLichess {
 	ArenaPage arena;
 	private Utility utility;
 	
-	
+	//Constructor with dependency injection
 	public Play_ArenaLichess(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

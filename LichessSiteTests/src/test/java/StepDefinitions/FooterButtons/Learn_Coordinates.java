@@ -16,6 +16,7 @@ public class Learn_Coordinates {
 	CoordinatesPage coordpage;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Learn_Coordinates(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

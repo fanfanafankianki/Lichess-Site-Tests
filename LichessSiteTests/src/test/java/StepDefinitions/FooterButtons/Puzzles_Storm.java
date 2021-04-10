@@ -16,6 +16,7 @@ public class Puzzles_Storm {
 	PuzzleStormPage puzzlestorm;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Puzzles_Storm(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

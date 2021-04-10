@@ -14,6 +14,7 @@ public class Home_PlayWithComputer {
 	ForumPage forum;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Home_PlayWithComputer(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

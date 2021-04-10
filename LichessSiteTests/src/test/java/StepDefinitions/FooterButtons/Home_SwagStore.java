@@ -18,6 +18,7 @@ public class Home_SwagStore {
 	TrainingDailyPage training;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Home_SwagStore(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=(ChromeDriver) utility.driver;

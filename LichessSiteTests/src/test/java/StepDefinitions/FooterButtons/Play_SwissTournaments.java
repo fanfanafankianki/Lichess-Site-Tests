@@ -17,6 +17,7 @@ public class Play_SwissTournaments {
 	SwissTournamentsPage swiss;
 	private Utility utility;
 	
+	//Constructor with dependency injection
 	public Play_SwissTournaments(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

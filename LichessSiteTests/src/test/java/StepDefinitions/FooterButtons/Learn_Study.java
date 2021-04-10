@@ -16,6 +16,7 @@ public class Learn_Study {
 	StudyPage study;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Learn_Study(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

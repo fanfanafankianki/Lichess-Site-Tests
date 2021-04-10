@@ -16,6 +16,8 @@ public class Watch_CurrentGames {
 	TvGamesPage games;
 	private Utility utility;
 
+	
+	//Constructor with dependency injection
 	public Watch_CurrentGames(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

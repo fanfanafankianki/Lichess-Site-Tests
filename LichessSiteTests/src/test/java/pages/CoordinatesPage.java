@@ -14,7 +14,7 @@ public class CoordinatesPage extends BasePage {
 	//Main content elements
 	//
 	
-	@FindBy(xpath="//main[1]/div[2]/div[4]/cg-helper[1]/cg-container[1]/cg-board[1]")
+	@FindBy(xpath="//main/div[@class='coord-trainer__board main-board']/div/cg-helper/cg-container/cg-board")
 	@CacheLookup
 	WebElement coordinates_board;
 
@@ -23,7 +23,7 @@ public class CoordinatesPage extends BasePage {
 		super(driver);
 		PageFactory.initElements(driver, this);
 		Thread.sleep(1000);
-		if(driver.getCurrentUrl().equals("https://lichess.org/coordinate")) {
+		if(!driver.getCurrentUrl().equals("https://lichess.org/training/coordinate")) {
 			throw new IllegalStateException("This is not coordinate page! The current page is " + driver.getCurrentUrl());
 		}
 	}

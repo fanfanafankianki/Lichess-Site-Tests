@@ -16,6 +16,7 @@ public class Learn_Practice {
 	PracticePage practice;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Learn_Practice(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

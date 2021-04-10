@@ -16,6 +16,8 @@ public class Tools_Import {
 	ImportPage importpage;
 	private Utility utility;
 
+	
+	//Constructor with dependency injection
 	public Tools_Import(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

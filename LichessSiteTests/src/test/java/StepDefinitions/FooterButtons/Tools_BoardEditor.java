@@ -16,6 +16,7 @@ public class Tools_BoardEditor {
 	EditorPage editor;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Tools_BoardEditor(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

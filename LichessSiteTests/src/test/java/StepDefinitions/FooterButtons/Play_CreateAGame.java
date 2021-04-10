@@ -16,7 +16,7 @@ public class Play_CreateAGame extends Utility {
 	GamePage game;
 	private Utility utility;
 
-
+	//Constructor with dependency injection
 	public Play_CreateAGame(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;
