@@ -12,6 +12,7 @@ import pages.ArenaPage;
 import pages.BroadcastPage;
 import pages.ChessBasicsPage;
 import pages.CoachesPage;
+import pages.FriendGamePage;
 import pages.CoordinatesPage;
 import pages.EditorPage;
 import pages.ForumPage;
@@ -53,6 +54,7 @@ public class Utility {
 	public CoordinatesPage coordinates;
 	public EditorPage editor;
 	public ForumPage forum;
+	public FriendGamePage friendgame;
 	public GamePage game;
 	public HomePage home;
 	public ImportPage imppage;
@@ -76,6 +78,8 @@ public class Utility {
 	public TvGamesPage tvgames;
 	public TvPage tv;
 	public VideoPage video;
+
+
 	
 	//Driver methods 
 	public WebDriver getDriver() {
@@ -139,6 +143,10 @@ public class Utility {
 	
 	public ForumPage getForumPage() throws InterruptedException{
 	      return (forum == null) ? forum = new ForumPage(driver) : forum;
+	      }
+	
+	public FriendGamePage getFriendGamePage() throws InterruptedException{
+	      return (friendgame == null) ? friendgame = new FriendGamePage(driver) : friendgame;
 	      }
 	
 	public GamePage getGamePage() throws InterruptedException{
