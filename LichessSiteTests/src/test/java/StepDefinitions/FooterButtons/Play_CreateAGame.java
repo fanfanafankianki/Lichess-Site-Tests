@@ -32,6 +32,7 @@ public class Play_CreateAGame extends Utility {
 
 	@And("user choose black pieces")
 	public void user_choose_black_pieces() throws InterruptedException {
+		home = utility.getHomePage();
 		home.creategame_chooseblack();
 		Thread.sleep(8000);
 	}

@@ -5,11 +5,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/resources/Cucumber Features/HomePageLichess.feature", glue= {"StepDefinitions/FooterButtons"},
+@CucumberOptions(features="src/test/resources/Cucumber Features/HomePageFooter.feature", glue= {"StepDefinitions/FooterButtons"},
 monochrome=true,
 plugin = { "pretty", "html:HtmlReports/HtmlReport"}
 )
 
-public class TestPlayButtonRunner {
+public class TestHomePageFooter {
 
 }

@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -59,11 +60,11 @@ public class HomePage extends BasePage {
 	
 	// Left and right board elements
 	
-	@FindBy(xpath="//body[1]/div[2]/main[1]/div[4]/a[1]/span[2]/cg-helper[1]/cg-container[1]/cg-board[1]")
+	@FindBy(xpath="//main/div[4]/a[1]/span[2]/cg-helper[1]/cg-container[1]/cg-board[1]")
 	@CacheLookup
 	WebElement left_board;
 	
-	@FindBy(xpath="//body[1]/div[2]/main[1]/a[1]/span[2]/cg-helper[1]/cg-container[1]/cg-board[1]")
+	@FindBy(xpath="//main/a[1]/span[2]/cg-helper[1]/cg-container[1]/cg-board[1]")
 	@CacheLookup
 	WebElement right_board;
 	
@@ -165,5 +166,13 @@ public class HomePage extends BasePage {
 	
 	public void clickSwagStore() {
 		a_swagstore.click();
+	}
+	
+	public void scrollintoSwagStore(ChromeDriver driver) {
+		driver.executeScript("arguments[0].scrollIntoView(true);", a_swagstore);
+	}
+	
+	public void scrollintoPatron(ChromeDriver driver) {
+		driver.executeScript("arguments[0].scrollIntoView(true);", a_patron);
 	}
 }
