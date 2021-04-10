@@ -16,6 +16,7 @@ public class Puzzles_Racer {
 	PuzzleRacePage puzzleracer;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Puzzles_Racer(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

@@ -22,7 +22,7 @@ public class BasePage {
 	//Elements present on every page
 	//
 	
-	@FindBy(xpath="//header/div[1]/h1[1]/a[1]")
+	@FindBy(xpath="//h1[@class='site-title']/a")
 	@CacheLookup
 	WebElement a_lichess;
 	
@@ -164,7 +164,7 @@ public class BasePage {
 
 	//Element visible after clicking "search" icon
 	
-	@FindBy(xpath="//header/div[2]/div[1]/input[1]")
+	@FindBy(xpath="//div[@id='clinput']/input")
 	WebElement hov_search_input;
 	
 	//
@@ -288,6 +288,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_play_arenatournaments.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_play_arenatournaments.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_play_arenatournaments).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -297,6 +304,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_play_createnewgame.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_play_createnewgame.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_play_createnewgame).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -306,6 +320,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_play_swisstournaments.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_play_swisstournaments.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_play_swisstournaments).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -315,6 +336,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_play).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_play_simultan.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_play_simultan.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_play_simultan).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -326,6 +354,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_puzzles).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_puzzles_puzzles.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_puzzles_puzzles.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_puzzles_puzzles).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -335,6 +370,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_puzzles).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_puzzles_dashboard.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_puzzles_dashboard.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_puzzles_dashboard).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -344,6 +386,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_puzzles).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_puzzles_racer.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_puzzles_racer.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_puzzles_racer).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -353,6 +402,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_puzzles).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_puzzles_storm.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_puzzles_storm.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_puzzles_storm).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -364,6 +420,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_learn).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_learn_chessbasics.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_learn_chessbasics.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_learn_chessbasics).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -373,6 +436,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_learn).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_learn_practice.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_learn_practice.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_learn_practice).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -382,6 +452,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_learn).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_learn_coordinates.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_learn_coordinates.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_learn_coordinates).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -391,6 +468,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_learn).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_learn_study.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_learn_study.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_learn_study).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -400,6 +484,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_learn).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_learn_coaches.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_learn_coaches.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_learn_coaches).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -411,6 +502,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_watch).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_watch_lichesstv.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_watch_lichesstv.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_watch_lichesstv).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -420,6 +518,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_watch).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_watch_games.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_watch_games.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_watch_games).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -429,6 +534,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_watch).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_watch_streamers.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_watch_streamers.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_watch_streamers).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -438,6 +550,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_watch).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_watch_broadcasts.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_watch_broadcasts.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_watch_broadcasts).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -447,6 +566,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_watch).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_watch_video.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_watch_video.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_watch_video).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -458,6 +584,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_community).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_community_players.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_community_players.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_community_players).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -467,6 +600,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_community).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_community_teams.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_community_teams.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_community_teams).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -476,6 +616,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_community).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_community_forum.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_community_forum.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_community_forum).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -487,6 +634,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_tools).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_tools_analysisboard.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_tools_analysisboard.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_tools_analysisboard).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -496,6 +650,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_tools).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_tools_explorer.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_tools_explorer.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_tools_explorer).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -505,6 +666,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_tools).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_tools_boardeditor.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_tools_boardeditor.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_tools_boardeditor).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -514,6 +682,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_tools).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_tools_importgame.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_tools_importgame.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_tools_importgame).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();
@@ -523,6 +698,13 @@ public class BasePage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(hov_tools).build().perform();
 		actions.pause(500);
+		while (true) {
+		    if (!(hov_tools_search.isDisplayed())) {
+		    	actions.pause(1000);
+		    } else if(hov_tools_search.isDisplayed()){
+		        break;
+		    }
+		}
 		actions.moveToElement(hov_tools_search).build().perform();
 		actions.pause(500);
 		actions.click().build().perform();

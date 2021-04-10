@@ -16,6 +16,7 @@ public class Home_PlayWithFriend {
 	FriendGamePage friendgame;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Home_PlayWithFriend(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

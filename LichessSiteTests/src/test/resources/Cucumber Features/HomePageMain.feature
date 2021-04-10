@@ -4,32 +4,32 @@ Feature: Features to test Home Page main contents redirections
     Given browser is open
     And user is on home page
 
-  #@HomeMain
-  #Scenario: Check Create a game -> Choose black option redirection
-    #When user clicks create a game button
-    #And user choose black pieces
-    #Then game page is opened
-    #And game board is displayed
+  @HomeMain
+  Scenario: Check Create a game -> Choose black option redirection
+    When user clicks create a game button
+    And user choose black pieces
+    Then game page is opened
+    And game board is displayed
 
-  #@HomeMain
-    #Scenario: Check Play with friend -> Choose black option redirection
-    #When user clicks Play with friend button
-    #And user choose black pieces in play with friend form
-    #Then friend game page is opened
-    #And friend game invite form is displayed
-#
-  #@HomeMain
-    #Scenario: Check Play with the computer -> Choose black option redirection
-    #When user clicks Play with computer button
-    #And user choose black pieces in play with computer form
-    #Then game page is opened
-    #And game board is displayed
+  @HomeMain
+    Scenario: Check Play with friend -> Choose black option redirection
+    When user clicks Play with friend button
+    And user choose black pieces in play with friend form
+    Then friend game page is opened
+    And friend game invite form is displayed
+
+  @HomeMain
+    Scenario: Check Play with the computer -> Choose black option redirection
+    When user clicks Play with computer button
+    And user choose black pieces in play with computer form
+    Then game page is opened
+    And game board is displayed
     
-  #@HomeMain
-    #Scenario: Check leftside gameboard redirection
-    #When user clicks on left gameboard
-    #Then user is navigated to the TV page
-    #And TV form is displayed
+  @HomeMain
+    Scenario: Check leftside gameboard redirection
+    When user clicks on left gameboard
+    Then user is navigated to the TV page
+    And TV form is displayed
     
   @HomeMain
     Scenario: Check Donate option redirection

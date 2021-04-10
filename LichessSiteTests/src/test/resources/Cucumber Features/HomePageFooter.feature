@@ -4,7 +4,7 @@ Feature: Features to test footer buttons redirections
     Given browser is open
     And user is on home page
 
-  @Play1
+  @Play
   Scenario: Check Play -> Create a game option redirection
     When user hovers over Play and clicks on Create a game
     And user choose black pieces

@@ -14,7 +14,7 @@ public class PracticePage extends BasePage{
 	//Main content elements
 	//
 	
-	@FindBy(xpath="//main[1]/aside[1]")
+	@FindBy(xpath="//main/aside[@class='page-menu__menu practice-side']")
 	@CacheLookup
 	WebElement practiceform;
 

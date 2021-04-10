@@ -14,7 +14,7 @@ public class PuzzlePage extends BasePage{
 	//Main content elements
 	//
 	
-	@FindBy(xpath="//main[1]/div[1]/div[1]/cg-helper[1]/cg-container[1]/cg-board[1]")
+	@FindBy(xpath="//main/div[@class='puzzle__board main-board']/div/cg-helper/cg-container/cg-board")
 	@CacheLookup
 	WebElement puzzlegameboard;
 

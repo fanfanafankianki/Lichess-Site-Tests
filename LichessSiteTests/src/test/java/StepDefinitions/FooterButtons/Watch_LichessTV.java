@@ -15,7 +15,8 @@ public class Watch_LichessTV {
 	HomePage home;
 	TvPage tv;
 	private Utility utility;
-
+	
+	//Constructor with dependency injection
 	public Watch_LichessTV(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

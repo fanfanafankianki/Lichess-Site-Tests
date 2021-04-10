@@ -17,11 +17,11 @@ public class Search_Input {
 	AccountPage account;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Search_Input(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;
 	}
-	
 
 	@When("user clicks on Search icon")
 	public void user_clicks_on_search_icon() throws InterruptedException {

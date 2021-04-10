@@ -16,6 +16,7 @@ public class Community_Forum {
 	ForumPage forum;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Community_Forum(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

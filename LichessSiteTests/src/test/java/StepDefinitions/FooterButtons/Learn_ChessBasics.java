@@ -16,6 +16,7 @@ public class Learn_ChessBasics {
 	ChessBasicsPage chessbasics;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Learn_ChessBasics(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

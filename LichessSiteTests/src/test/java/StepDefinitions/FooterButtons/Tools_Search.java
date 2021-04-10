@@ -16,6 +16,8 @@ public class Tools_Search {
 	SearchPage search;
 	private Utility utility;
 
+	
+	//Constructor with dependency injection
 	public Tools_Search(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

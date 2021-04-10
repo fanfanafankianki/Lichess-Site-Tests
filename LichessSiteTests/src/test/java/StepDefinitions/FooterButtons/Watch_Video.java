@@ -16,6 +16,7 @@ public class Watch_Video {
 	VideoPage video;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Watch_Video(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

@@ -16,6 +16,7 @@ public class Learn_Coaches {
 	CoachesPage coaches;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Learn_Coaches(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

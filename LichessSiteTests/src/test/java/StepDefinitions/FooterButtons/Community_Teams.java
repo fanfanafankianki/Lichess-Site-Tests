@@ -16,6 +16,7 @@ public class Community_Teams {
 	TeamsPage teams;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Community_Teams(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;

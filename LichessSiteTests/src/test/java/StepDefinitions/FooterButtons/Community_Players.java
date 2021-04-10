@@ -16,6 +16,7 @@ public class Community_Players {
 	PlayerPage player;
 	private Utility utility;
 
+	//Constructor with dependency injection
 	public Community_Players(StepDefinitions.Utility utility) {
 		this.utility=utility;
 		this.driver=utility.driver;
