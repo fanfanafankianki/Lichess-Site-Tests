@@ -27,8 +27,6 @@ public class Home_SwagStore {
 	public void user_scroll_swag_store_button_into_view() throws InterruptedException {
 		home = utility.getHomePage();
 		home.scrollintoSwagStore(driver);
-		Thread.sleep(500); 
-		
 	}
 
 	@When("user clicks on Swag Store button")

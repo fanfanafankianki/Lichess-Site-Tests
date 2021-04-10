@@ -18,7 +18,7 @@ public class ArenaPage extends BasePage {
 	@CacheLookup
 	WebElement section_tournament;
 	
-	
+	//Constructor checks if you are on the right page 
 	public ArenaPage (WebDriver driver) throws InterruptedException {
 		super(driver);
 		PageFactory.initElements(driver, this);

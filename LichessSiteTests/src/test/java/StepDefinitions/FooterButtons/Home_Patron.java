@@ -27,7 +27,6 @@ public class Home_Patron {
 	public void user_scroll_donate_button_into_view() throws InterruptedException {
 		home = utility.getHomePage();
 		home.scrollintoPatron(driver);
-		Thread.sleep(500); 
 	}
 
 	@And("user clicks on donate button")

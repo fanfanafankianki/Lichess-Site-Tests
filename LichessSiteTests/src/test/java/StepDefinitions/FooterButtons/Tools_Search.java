@@ -25,7 +25,6 @@ public class Tools_Search {
 	public void user_hovers_over_tools_and_clicks_on_advanced_search() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Tools_Search();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Search page")

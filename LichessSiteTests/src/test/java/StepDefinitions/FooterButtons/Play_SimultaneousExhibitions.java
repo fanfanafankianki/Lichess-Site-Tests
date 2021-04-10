@@ -25,7 +25,6 @@ public class Play_SimultaneousExhibitions {
 	public void user_hovers_over_play_and_clicks_on_simultaneous_exhibitions() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Play_Simultan();
-		Thread.sleep(2000);
 	}
 
 	@Then("user is navigated to the simultaneous exhibitions page")

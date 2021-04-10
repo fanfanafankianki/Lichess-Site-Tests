@@ -24,7 +24,6 @@ public class Home_PlayWithComputer {
 	public void user_clicks_play_with_computer_button() throws InterruptedException {
 		home = utility.getHomePage();
 		home.clickPlay_with_Computer();
-		Thread.sleep(3000);
 	}
 	
 	@When("user choose black pieces in play with computer form")

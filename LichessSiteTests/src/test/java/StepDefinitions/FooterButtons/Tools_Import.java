@@ -25,7 +25,6 @@ public class Tools_Import {
 	public void user_hovers_over_tools_and_clicks_on_import_game() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Tools_Import();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Import page")

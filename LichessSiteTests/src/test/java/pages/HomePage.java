@@ -97,7 +97,17 @@ public class HomePage extends BasePage {
 	// Play -> New Game -> Choose black
 	public void creategame_chooseblack() throws InterruptedException {
 		hov_play_createnewgame_chooseblack.click();
-		Thread.sleep(10000);
+		
+		//Waiting for player to continue 
+		while (true) {
+			String s = driver.getCurrentUrl();
+		    if (s.equals("https://lichess.org/")) {
+		    	Thread.sleep(1000);
+		    	System.out.println(driver.getCurrentUrl());
+		    } else if(!(s.equals("https://lichess.org/"))){
+		        break;
+		    }
+		}
 	}
 	
 	//Main content functions
@@ -168,11 +178,15 @@ public class HomePage extends BasePage {
 		a_swagstore.click();
 	}
 	
-	public void scrollintoSwagStore(ChromeDriver driver) {
+	//Donate and Swag store scrolls 
+	
+	public void scrollintoSwagStore(ChromeDriver driver) throws InterruptedException {
 		driver.executeScript("arguments[0].scrollIntoView(true);", a_swagstore);
+		Thread.sleep(500); 
 	}
 	
-	public void scrollintoPatron(ChromeDriver driver) {
+	public void scrollintoPatron(ChromeDriver driver) throws InterruptedException {
 		driver.executeScript("arguments[0].scrollIntoView(true);", a_patron);
+		Thread.sleep(500); 
 	}
 }

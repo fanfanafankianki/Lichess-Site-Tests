@@ -24,6 +24,5 @@ public class Home_CreateAGame {
 	public void user_clicks_create_a_game_button() throws InterruptedException {
 		home = utility.getHomePage();
 		home.clickCreate_a_Game();
-		Thread.sleep(3000);
 	}
 }

@@ -18,8 +18,6 @@ public class ChessBasicsPage extends BasePage {
 	@CacheLookup
 	WebElement learnchessform;
 
-	
-	
 	//Constructor checks if you are on the right page 
 	public ChessBasicsPage (WebDriver driver) throws InterruptedException {
 		super(driver);

@@ -39,12 +39,10 @@ public class Play_ArenaLichess {
 	public void user_hovers_over_play_and_clicks_on_arena_tournaments() throws InterruptedException {
 		HomePage home = utility.getHomePage();
 		home.hover_Play_Arena();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the arena page")
 	public void user_is_navigated_to_the_arena_page() throws InterruptedException {
-		Thread.sleep(2000);
 		arena = utility.getArenaPage();
 	}
 

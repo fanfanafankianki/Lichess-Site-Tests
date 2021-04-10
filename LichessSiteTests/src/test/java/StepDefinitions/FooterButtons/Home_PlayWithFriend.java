@@ -26,7 +26,6 @@ public class Home_PlayWithFriend {
 	public void user_clicks_play_with_friend_button() throws InterruptedException {
 		home = utility.getHomePage();
 		home.clickPlay_with_Friend();
-		Thread.sleep(3000);
 	}
 	
 	@And("user choose black pieces in play with friend form")

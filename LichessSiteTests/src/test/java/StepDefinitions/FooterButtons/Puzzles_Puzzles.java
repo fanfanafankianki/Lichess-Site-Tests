@@ -25,14 +25,12 @@ public class Puzzles_Puzzles {
 	public void user_clicks_on_puzzles() throws InterruptedException {
 		home = utility.getHomePage();
 		home.clickPuzzles();
-		Thread.sleep(3000);
 	}
 
 	@When("user hovers over Puzzles and clicks on Puzzles")
 	public void user_hovers_over_puzzles_and_clicks_on_puzzles() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Puzzles_Puzzles();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Puzzles page")

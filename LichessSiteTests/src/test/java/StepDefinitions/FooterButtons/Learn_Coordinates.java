@@ -25,7 +25,6 @@ public class Learn_Coordinates {
 	public void user_hovers_over_learn_and_clicks_on_coordinates() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Learn_Coordinates();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Coordinates page")

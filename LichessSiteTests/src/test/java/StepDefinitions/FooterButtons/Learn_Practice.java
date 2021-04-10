@@ -25,14 +25,12 @@ public class Learn_Practice {
 	public void user_clicks_on_learn() throws InterruptedException {
 		home = utility.getHomePage();
 		home.clickLearn();
-		Thread.sleep(3000);
 	}
 
 	@When("user hovers over Learn and clicks on Practice")
 	public void user_hovers_over_learn_and_clicks_on_practice() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Learn_Practice();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Practice page")

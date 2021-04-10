@@ -24,7 +24,6 @@ public class Puzzles_Storm {
 	public void user_hovers_over_puzzles_and_clicks_on_puzzle_storm() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Puzzles_Storm();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Puzzle storm page")

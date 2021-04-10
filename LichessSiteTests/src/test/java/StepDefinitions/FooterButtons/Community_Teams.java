@@ -25,7 +25,6 @@ public class Community_Teams {
 	public void user_hovers_over_community_and_clicks_on_teams() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Community_Teams();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Teams page")
