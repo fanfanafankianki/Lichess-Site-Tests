@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
 import pages.AccountPage;
 import pages.AnalysisPage;
 import pages.ArenaPage;
@@ -40,7 +41,10 @@ import pages.TvGamesPage;
 import pages.TvPage;
 import pages.VideoPage;
 
+//
 //Class for dependency injection
+//
+
 public class Utility {
 	
 	public WebDriver driver;

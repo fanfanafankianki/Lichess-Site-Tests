@@ -25,14 +25,12 @@ public class Tools_Analysis {
 	public void user_clicks_on_tools() throws InterruptedException {
 		home = utility.getHomePage();
 		home.clickTools();
-		Thread.sleep(3000);
 	}
 	
 	@When("user hovers over Tools and clicks on Analysis Board")
 	public void user_hovers_over_tools_and_clicks_on_analysis_board() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Tools_Analysis();
-		Thread.sleep(3000);
 	}
 	
 	@When("user hovers over Tools and clicks on Opening explorer")

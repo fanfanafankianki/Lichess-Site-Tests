@@ -26,7 +26,6 @@ public class Community_Forum {
 	public void user_hovers_over_community_and_clicks_on_forum() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Community_Forum();
-		Thread.sleep(3000);
 	}
 	
 	@Then("user is navigated to the Forum page")

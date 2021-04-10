@@ -25,7 +25,6 @@ public class Tools_BoardEditor {
 	public void user_hovers_over_tools_and_clicks_on_board_editor() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Tools_BoardEditor();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Editor page")

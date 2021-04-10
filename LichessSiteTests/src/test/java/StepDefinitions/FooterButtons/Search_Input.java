@@ -27,7 +27,6 @@ public class Search_Input {
 	public void user_clicks_on_search_icon() throws InterruptedException {
 		home = utility.getHomePage();
 		home.clickSearch();
-		Thread.sleep(5000);
 	}
 	
 	@And("Text input is displayed")

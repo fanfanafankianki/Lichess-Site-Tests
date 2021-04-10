@@ -25,7 +25,6 @@ public class Watch_CurrentGames {
 	public void user_hovers_over_watch_and_clicks_on_current_games() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Watch_Games();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the games page")

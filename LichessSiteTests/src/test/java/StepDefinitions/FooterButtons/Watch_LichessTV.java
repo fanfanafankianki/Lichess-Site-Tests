@@ -24,14 +24,12 @@ public class Watch_LichessTV {
 	public void user_clicks_on_watch() throws InterruptedException {
 		home = utility.getHomePage();
 		home.clickWatch();
-		Thread.sleep(3000);
 	}
 
 	@When("user hovers over Watch and clicks on Lichess TV")
 	public void user_hovers_over_watch_and_clicks_on_lichess_tv() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Watch_TV();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the TV page")

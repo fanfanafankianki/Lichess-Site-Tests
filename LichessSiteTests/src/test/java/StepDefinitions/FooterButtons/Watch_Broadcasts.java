@@ -24,7 +24,6 @@ public class Watch_Broadcasts {
 	public void user_hovers_over_watch_and_clicks_on_broadcasts() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Watch_Broadcasts();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Broadcasts page")

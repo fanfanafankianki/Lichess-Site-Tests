@@ -25,7 +25,6 @@ public class Puzzles_Racer {
 	public void user_hovers_over_puzzles_and_clicks_on_puzzle_races() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Puzzles_Racer();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Puzzle races page")

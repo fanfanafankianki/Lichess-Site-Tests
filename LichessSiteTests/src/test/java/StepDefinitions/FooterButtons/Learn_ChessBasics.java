@@ -25,7 +25,6 @@ public class Learn_ChessBasics {
 	public void user_hovers_over_learn_and_clicks_on_chess_basics() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Learn_ChessBasics();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Chess basics page")

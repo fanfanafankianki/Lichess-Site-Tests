@@ -25,7 +25,6 @@ public class Watch_Streamers {
 	public void user_hovers_over_watch_and_clicks_on_streamers() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Watch_Streamers();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Streamer page")

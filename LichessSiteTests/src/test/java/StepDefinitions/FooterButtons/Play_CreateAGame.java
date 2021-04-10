@@ -34,7 +34,7 @@ public class Play_CreateAGame extends Utility {
 	public void user_choose_black_pieces() throws InterruptedException {
 		home = utility.getHomePage();
 		home.creategame_chooseblack();
-		Thread.sleep(8000);
+		Thread.sleep(2000);
 	}
 
 	@Then("game page is opened")

@@ -26,7 +26,6 @@ public class Learn_Coaches {
 	public void user_hovers_over_learn_and_clicks_on_coaches() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Learn_Coaches();
-		Thread.sleep(3000);
 	}
 
 

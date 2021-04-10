@@ -25,14 +25,12 @@ public class Community_Players {
 	public void user_clicks_on_community() throws InterruptedException {
 		home = utility.getHomePage();
 		home.clickCommunity();
-		Thread.sleep(3000);
 	}
 
 	@When("user hovers over Community and clicks on Players")
 	public void user_hovers_over_community_and_clicks_on_players() throws InterruptedException {
 		home = utility.getHomePage();
 		home.hover_Community_Players();
-		Thread.sleep(3000);
 	}
 
 	@Then("user is navigated to the Player page")
