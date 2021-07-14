@@ -1,5 +1,5 @@
 # Lichess-Site-Tests-
-Test of lichess site made with Selenium, Java and Cucumber.
+Functional tests of lichess site made with Selenium, Java and Cucumber.
 
 To run tests you will need:
 1. Maven
